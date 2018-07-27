@@ -8,15 +8,14 @@ import 'font-awesome/css/font-awesome.min.css';
 // Import Simple Line Icons Set
 import 'simple-line-icons/css/simple-line-icons.css';
 import React, { Component } from 'react';
-import Login  from './views/login/login';
-import ForgotPassword from './views/forgotpassword/forgotpassword';
+import { Login } from './views/login/Login';
+import ForgotPassword from './views/forgotpassword/ForgotPassword';
 import { HashRouter, Route, Switch, Redirect } from 'react-router-dom';
-import Layout from './containers/layout';
+import Layout from './containers/Layout';
 // import { renderRoutes } from 'react-router-config';
 
 class App extends Component {
   render() {
-     console.log(localStorage.getItem('user'));
     return (
       <HashRouter>
         <Switch>

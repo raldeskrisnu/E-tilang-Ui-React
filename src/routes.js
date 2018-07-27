@@ -1,13 +1,13 @@
 import React from 'react';
 import Loadable from 'react-loadable'
-import Layout from './containers/layout';
+import Layout from './containers/Layout';
 
 function Loading() {
     return <div>Loading...</div>;
 }
 
 const users = Loadable({
-    loader: () => import('./views/users/users'),
+    loader: () => import('./views/users/Users'),
     loading: Loading,
   });
 

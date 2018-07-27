@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Redirect, Route, Switch } from 'react-router-dom';
 import { Container } from 'reactstrap';
-import Header from './header';
+import Header from './Header';
 import {
     AppAside,
     AppBreadcrumb,
@@ -18,7 +18,7 @@ import {
 import Navigation from '../navigation/nav';
 import Routes from '../routes';
 
-class layout extends Component {
+class Layout extends Component {
 
     render() {
         return (
@@ -57,4 +57,4 @@ class layout extends Component {
     }
 }
 
-export default layout;
+export default Layout;
