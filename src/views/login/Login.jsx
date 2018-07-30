@@ -35,12 +35,13 @@ class Login extends Component {
     
     render() {
         const { username, password } = this.state;
-        const { loggingIn } = this.props;
+        const { loggedIn } = this.props;
+        const { blabla } = this.props;
         return (
             <div className="app flex-row align-items-center">
                 <Container>
                     {
-                        loggingIn &&
+                        loggedIn &&
                         <AlertUtil />
                     }
                    <form name="form" onSubmit={this.loginHandler}>
@@ -57,7 +58,7 @@ class Login extends Component {
                                                     <i className="icon-user"></i>
                                                 </InputGroupText>
                                             </InputGroupAddon>
-                                            <Input type="text" className="form-control" name="username" value={username} onChange={this.handleChange} />
+                                            <Input type="text" placeholder="Username" className="form-control" name="username" value={username} onChange={this.handleChange} />
                                         </InputGroup>
                                         <InputGroup className="mb-4">
                                             <InputGroupAddon addonType="prepend">
@@ -65,11 +66,16 @@ class Login extends Component {
                                                     <i className="icon-lock"></i>
                                                 </InputGroupText>
                                             </InputGroupAddon>
-                                            <Input type="password" className="form-control" name="password" value={password} onChange={this.handleChange} />
+                                            <Input type="password" placeholder="Password" className="form-control" name="password" value={password} onChange={this.handleChange} />
                                         </InputGroup>
                                         <Row>
                                             <Col xs="6">
                                                 <Button color="primary" className="px-4">Login</Button>
+                                                    {
+
+                                                        blabla &&
+                                                        <img src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
+                                                    }
                                             </Col>
                                             <Col xs="6" className="text-right">
                                             
@@ -98,9 +104,13 @@ class Login extends Component {
 }
 
 function mapStateToProps(state) {
-    const { loggingIn } = state.authentication;
+    const { loggedIn } = state.authentication;
+    const { blabla } = state.authentication;
+    console.log(loggedIn);
+    console.log(blabla);
     return {
-        loggingIn
+        loggedIn,
+        blabla
     };
 }
 

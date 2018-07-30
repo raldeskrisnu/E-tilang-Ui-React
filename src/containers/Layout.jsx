@@ -42,7 +42,8 @@ class Layout extends Component {
                                     // console.log(route);
                                     return route.component ? (<Route key={idx} path={route.path} exact={route.exact} name={route.name} render={props => (
                                         
-                                        <route.component {...props} />
+                                        localStorage.getItem('user') ?  <route.component {...props} />   : <Redirect from="/" to="/login" />
+                                        // <route.component {...props} />
                                     )} />)
                                         : (null);
                                 },

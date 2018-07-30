@@ -2,23 +2,32 @@ import React, { Component } from 'react';
 import { alertActions } from '../action';
 import { connect } from 'react-redux';
 import { Alert } from 'reactstrap';
+import history from '../helpers/history';
 
 class AlertUtil extends Component {
 
     constructor(props){
         super(props);
+
+        const { dispatch } = this.props;
+
+        history.listen((location, action) => {
+            // clear alert on location change
+            dispatch(alertActions.clear());
+        });
+
         this.onDismiss = this.onDismiss.bind(this);
     }
 
     onDismiss(){
         const { dispatch } = this.props;
-        dispatch(alertActions.clear());
+        dispatch(alertActions.close());
     }
 
     render(){
         const { alert } = this.props;
         return (
-            <Alert color="info" isOpen={alert.visible} toggle={this.onDismiss}>
+            <Alert color={alert.type} isOpen={alert.visible} toggle={this.onDismiss}>
                 {
                     alert.message
                 }
