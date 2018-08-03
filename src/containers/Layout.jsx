@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
-import { Redirect, Route, Switch } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import { Container } from 'reactstrap';
 import Header from './Header';
 import {
-    AppAside,
     AppBreadcrumb,
-    AppFooter,
     AppHeader,
     AppSidebar,
     AppSidebarFooter,
@@ -42,8 +40,8 @@ class Layout extends Component {
                                     // console.log(route);
                                     return route.component ? (<Route key={idx} path={route.path} exact={route.exact} name={route.name} render={props => (
                                         
-                                        localStorage.getItem('user') ?  <route.component {...props} />   : <Redirect from="/" to="/login" />
-                                        // <route.component {...props} />
+                                        // localStorage.getItem('user') ?  <route.component {...props} />   : <Redirect from="/" to="/login" />
+                                        <route.component {...props} />
                                     )} />)
                                         : (null);
                                 },

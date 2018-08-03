@@ -10,7 +10,7 @@ import 'simple-line-icons/css/simple-line-icons.css';
 import React, { Component } from 'react';
 import { Login } from './views/login/Login';
 import ForgotPassword from './views/forgotpassword/ForgotPassword';
-import { HashRouter, Route, Switch, Redirect,Router } from 'react-router-dom';
+import { BrowserRouter, Route, Switch,Router } from 'react-router-dom';
 import Layout from './containers/Layout';
 import history from './helpers/history';
 import { PrivateRoutes } from './private-routes';
@@ -18,12 +18,14 @@ import { PrivateRoutes } from './private-routes';
 class App extends Component {
   render() {
     return (
-      <HashRouter>
+      <BrowserRouter>
         <Switch>
           <Router history={history}>
           <div>
-          <Route path="/login" name="Login" component={Login} />
-            <PrivateRoutes exact path="/dashboard" component={Layout} />
+          
+            <PrivateRoutes path="/" component={Layout} />
+            <Route path="/login" name="Login" component={Login} />
+            <Route path="/login" name="ForgotPassword" component={ForgotPassword} />
             </div>
           </Router>
           {/* <Route exact path="/login" name="Login" component={Login} />
@@ -34,7 +36,7 @@ class App extends Component {
           } */}
           
         </Switch>
-      </HashRouter>
+      </BrowserRouter>
     );
   }
 }

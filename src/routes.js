@@ -12,8 +12,8 @@ const users = Loadable({
   });
 
 const routes = [
-    // { path: '/', name: 'Dashboard', component: Layout },
-    { path: '/users', exact: true,  name: 'Users', component: users }
+    { path: '/dashboard', name: 'Dashboard', component: Layout },
+    { path: '/users', name: 'Users', component: users }
 ];
 
 export default routes;
