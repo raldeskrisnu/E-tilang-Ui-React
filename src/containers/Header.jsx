@@ -1,15 +1,8 @@
 import React, { Component } from 'react';
 import { Badge, DropdownItem, DropdownMenu, DropdownToggle, Nav, NavItem, NavLink } from 'reactstrap';
 import { AppHeaderDropdown, AppNavbarBrand, AppSidebarToggler } from '@coreui/react';
-import PropTypes from 'prop-types';
 import logo from '../assets/img/brand/logo.svg';
-import sygnet from '../assets/img/brand/sygnet.svg';
-
-const propTypes = {
-    children: PropTypes.node,
-  };
-  
-  const defaultProps = {};
+import sygnet from '../assets/img/brand/sygnet.svg';  
 
 class Header extends Component {
     

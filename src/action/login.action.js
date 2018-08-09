@@ -12,7 +12,7 @@ function login(username,password){
         if(username === 'admin' && password === 'admin'){
             dispatch(success('Login success'));
             dispatch(alertActions.success('Login success'));
-            history.push('/');
+            history.push('/dashboard');
             localStorage.setItem('user','todo');
         } else {
             dispatch(failure('Login success'));

@@ -23,12 +23,12 @@ export default {
       children: [
         {
           name: 'All Police',
-          url: 'police/allpolice',
+          url: '/police/allpolice',
           icon: 'icon-puzzle',
         },
         {
           name: 'Active Police',
-          url: '/base/cards',
+          url: '/police/active',
           icon: 'icon-puzzle',
         }
       ],

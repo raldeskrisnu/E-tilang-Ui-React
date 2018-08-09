@@ -28,13 +28,6 @@ class App extends Component {
             <Route path="/login" name="ForgotPassword" component={ForgotPassword} />
             </div>
           </Router>
-          {/* <Route exact path="/login" name="Login" component={Login} />
-          <Route path="/dashboard" name="Dashboard" component={Layout} /> 
-          <Route exact path="/forgotpassword" name="Forgot Password" component={ForgotPassword} />
-          {
-            localStorage.getItem('user') ?  <Redirect to="/dashboard" />  : <Redirect from="/dashboard" to="/login" />
-          } */}
-          
         </Switch>
       </BrowserRouter>
     );
