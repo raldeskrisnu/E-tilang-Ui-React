@@ -21,12 +21,25 @@ const activePolice = Loadable({
     loading: Loading
 });
 
+const trafficViolator = Loadable({
+    loader: () => import('./views/trafficviolator/trafficviolator'),
+    loading: Loading
+});
+
+const policeLocationMap = Loadable({
+    loader: () => import('./views/gmap/gmap'),
+    loading: Loading
+});
+
 const routes = [
     { path: '/dashboard', name: 'Dashboard', component: Layout },
     { path: '/users', name: 'Users', component: users },
-    { path: '/police', exact: true, name: 'Police', component: police },
-    { path: '/police/allpolice', exact:true, name: 'Police Data', component: police },
-    { path: '/police/active', exact:true, name: 'Police Data', component: activePolice },
+    { path: '/police', exact: true, name: 'Polisi', component: police },
+    { path: '/police/allpolice', exact:true, name: 'Semua Data Polisi', component: police },
+    { path: '/police/active', exact:true, name: 'Data Polisi Aktif', component: activePolice },
+    { path: '/police/location', exact:true, name: 'Lokasi Polisi', component: policeLocationMap },
+    { path: '/pelanggar/', exact:true, name: 'Pelanggar', component: trafficViolator },
+    { path: '/pelanggar/datapelanggar', exact:true, name: 'Data Pelanggar', component: trafficViolator },
 ];
 
 export default routes;

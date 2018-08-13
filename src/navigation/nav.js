@@ -17,7 +17,19 @@ export default {
       },
     },
     {
-      name: 'Police Data',
+      name: 'Data Pelanggar',
+      url: '/pelanggar',
+      icon: 'icon-puzzle',
+      children: [
+        {
+          name: 'Data pelanggar',
+          url: '/pelanggar/datapelanggar',
+          icon: 'icon-puzzle',
+        }
+      ],
+    },
+    {
+      name: 'Data Polisi',
       url: '/police',
       icon: 'icon-puzzle',
       children: [
@@ -29,6 +41,11 @@ export default {
         {
           name: 'Active Police',
           url: '/police/active',
+          icon: 'icon-puzzle',
+        },
+        {
+          name: 'Location Police',
+          url: '/police/location',
           icon: 'icon-puzzle',
         }
       ],

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Card, CardBody, CardHeader, Col, Table } from 'reactstrap';
-export default class ActivePolice extends Component {
+
+export default class trafficviolator extends Component {
     constructor(props){
         super(props);
     }
@@ -11,7 +12,7 @@ export default class ActivePolice extends Component {
                 <Col>
                     <Card>
                         <CardHeader>
-                            <i className="fa fa-align-justify"></i> Active Police
+                            <i className="fa fa-align-justify"></i> Traffic Violator
                          </CardHeader>
                         <CardBody>
                             <Table hover bordered striped responsive size="sm">
@@ -30,5 +31,4 @@ export default class ActivePolice extends Component {
             </div>
         )
     }
-
 }
