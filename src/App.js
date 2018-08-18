@@ -8,28 +8,30 @@ import 'font-awesome/css/font-awesome.min.css';
 // Import Simple Line Icons Set
 import 'simple-line-icons/css/simple-line-icons.css';
 import React, { Component } from 'react';
-import Login  from './views/login/login';
-import ForgotPassword from './views/forgotpassword/forgotpassword';
-import { HashRouter, Route, Switch, Redirect } from 'react-router-dom';
-import Layout from './containers/layout';
-// import { renderRoutes } from 'react-router-config';
+import { Login } from './views/login/Login';
+import ForgotPassword from './views/forgotpassword/ForgotPassword';
+import { BrowserRouter, Route, Switch,Router } from 'react-router-dom';
+import Layout from './containers/Layout';
+import history from './helpers/history';
+import { PrivateRoutes } from './private-routes';
 
 class App extends Component {
   render() {
-     console.log(localStorage.getItem('user'));
     return (
-      <HashRouter>
+      <BrowserRouter>
         <Switch>
-          <Route exact path="/login" name="Login" component={Login} />
-          <Route exact path="/forgotpassword" name="Forgot Password" component={ForgotPassword} />
-          {
-            // localStorage.getItem('user') ?  <Route path="/" name="Dashboard" component={Layout} />   : <Redirect from="/" to="/login" />
-            <Route path="/" name="Dashboard" component={Layout} />
-          }
+          <Router history={history}>
+          <div>
           
-          />
+            <PrivateRoutes path="/" component={Layout} />
+            <Route path="/login" name="Login" component={Login} />
+            <Route path="/forgotpassword" name="ForgotPassword" component={ForgotPassword} />
+            </div>
+          </Router>
+          
         </Switch>
-      </HashRouter>
+        
+      </BrowserRouter>
     );
   }
 }

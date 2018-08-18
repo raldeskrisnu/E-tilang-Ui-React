@@ -1,0 +1,16 @@
+<ifModule mod_rewrite.c>
+  # Make apache follow sym links to files
+  Options +FollowSymLinks
+  # If somebody opens a folder, hide all files from the resulting folder list
+  IndexIgnore */*
+
+  #######################################################################
+  # REWRITING                                                           #
+  #######################################################################
+
+  RewriteEngine On
+
+  # If its not HTTPS
+  RewriteCond %{HTTPS} off
+  
+</ifModule>

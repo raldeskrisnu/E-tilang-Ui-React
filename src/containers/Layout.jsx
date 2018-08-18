@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
-import { Redirect, Route, Switch } from 'react-router-dom';
+import { Route, Switch, Redirect } from 'react-router-dom';
 import { Container } from 'reactstrap';
-import Header from './header';
+import Header from './Header';
 import {
-    AppAside,
     AppBreadcrumb,
-    AppFooter,
     AppHeader,
     AppSidebar,
     AppSidebarFooter,
@@ -18,7 +16,7 @@ import {
 import Navigation from '../navigation/nav';
 import Routes from '../routes';
 
-class layout extends Component {
+class Layout extends Component {
 
     render() {
         return (
@@ -38,16 +36,15 @@ class layout extends Component {
                         <AppBreadcrumb appRoutes={Routes} />
                         <Container fluid>
                             <Switch>
-                                {Routes.map((route, idx) => {
-                                    // console.log(route);
+                                {
+                                    Routes.map((route, idx) => {
                                     return route.component ? (<Route key={idx} path={route.path} exact={route.exact} name={route.name} render={props => (
-                                        
                                         <route.component {...props} />
                                     )} />)
-                                        : (null);
+                                        : (null)
                                 },
                                 )}
-                                {/* <Redirect from="/" to="/login" /> */}
+                                <Redirect from="/" to="/dashboard" />
                             </Switch>
                         </Container>
                     </main>
@@ -57,4 +54,4 @@ class layout extends Component {
     }
 }
 
-export default layout;
+export default Layout;

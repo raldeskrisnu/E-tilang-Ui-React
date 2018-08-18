@@ -1,10 +1,10 @@
 import React from 'react';
 
-class users extends React.Component {
+class Users extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="animated fadeIn">
                 <p>
                     Lorem ipsum
                 </p>
@@ -13,4 +13,4 @@ class users extends React.Component {
     }
 }
 
-export default users;
+export default Users;
