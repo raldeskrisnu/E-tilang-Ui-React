@@ -4,7 +4,7 @@ class Users extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="animated fadeIn">
                 <p>
                     Lorem ipsum
                 </p>

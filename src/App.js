@@ -25,10 +25,12 @@ class App extends Component {
           
             <PrivateRoutes path="/" component={Layout} />
             <Route path="/login" name="Login" component={Login} />
-            <Route path="/login" name="ForgotPassword" component={ForgotPassword} />
+            <Route path="/forgotpassword" name="ForgotPassword" component={ForgotPassword} />
             </div>
           </Router>
+          
         </Switch>
+        
       </BrowserRouter>
     );
   }

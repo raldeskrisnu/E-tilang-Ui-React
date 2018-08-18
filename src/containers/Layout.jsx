@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, Redirect } from 'react-router-dom';
 import { Container } from 'reactstrap';
 import Header from './Header';
 import {
@@ -36,17 +36,15 @@ class Layout extends Component {
                         <AppBreadcrumb appRoutes={Routes} />
                         <Container fluid>
                             <Switch>
-                                {Routes.map((route, idx) => {
-                                    // console.log(route);
+                                {
+                                    Routes.map((route, idx) => {
                                     return route.component ? (<Route key={idx} path={route.path} exact={route.exact} name={route.name} render={props => (
-                                        
-                                        // localStorage.getItem('user') ?  <route.component {...props} />   : <Redirect from="/" to="/login" />
                                         <route.component {...props} />
                                     )} />)
-                                        : (null);
+                                        : (null)
                                 },
                                 )}
-                                {/* <Redirect from="/" to="/login" /> */}
+                                <Redirect from="/" to="/dashboard" />
                             </Switch>
                         </Container>
                     </main>

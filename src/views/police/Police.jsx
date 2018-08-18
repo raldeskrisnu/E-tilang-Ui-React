@@ -8,7 +8,7 @@ export default class Police extends Component {
 
     render(){
         return (
-            <div>
+            <div className="animated fadeIn">
                 <Col>
                     <Card>
                         <CardHeader>

@@ -12,7 +12,7 @@ class gmap extends Component {
          ));
     
     return(
-        <div>
+        <div className="animated fadeIn">
           <GoogleMapExample
             containerElement={ <div style={{ height: '500px', width: 'auto' }} /> }
             mapElement={ <div style={{ height: '100%' }} /> }
