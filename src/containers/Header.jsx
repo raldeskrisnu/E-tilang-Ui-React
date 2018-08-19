@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { DropdownItem, DropdownMenu, DropdownToggle, Nav, NavItem, NavLink } from 'reactstrap';
 import { AppHeaderDropdown, AppNavbarBrand, AppSidebarToggler } from '@coreui/react';
-import logo from '../assets/img/brand/logo.svg';
+import logo from '../assets/img/brand/logo.png';
 import sygnet from '../assets/img/brand/sygnet.svg';  
 
 class Header extends Component {
@@ -12,8 +12,8 @@ class Header extends Component {
             <React.Fragment>
                 <AppSidebarToggler className="d-lg-none" display="md" mobile />
                 <AppNavbarBrand
-                full={{ src: logo, width: 89, height: 25, alt: 'CoreUI Logo' }}
-                minimized={{ src: sygnet, width: 30, height: 30, alt: 'CoreUI Logo' }}
+                full={{ src: logo, width: 89, height: 25, alt: 'E-tilang' }}
+                minimized={{ src: sygnet, width: 30, height: 30, alt: 'E-tilang' }}
               />
                 <AppSidebarToggler className="d-md-down-none" display="lg" />
 

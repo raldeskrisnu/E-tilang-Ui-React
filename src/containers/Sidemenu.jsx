@@ -10,7 +10,7 @@ const propTypes = {
 
 const defaultProps = {};
 
-class sidemenu extends component {
+class Sidemenu extends Component {
 
   constructor(props) {
     super(props);
@@ -308,3 +308,5 @@ class sidemenu extends component {
     )
   }
 }
+
+export default Sidemenu;

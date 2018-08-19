@@ -19,34 +19,44 @@ export default {
     {
       name: 'Data Pelanggar',
       url: '/pelanggar',
-      icon: 'icon-puzzle',
+      icon: 'icon-anchor',
       children: [
         {
           name: 'Data pelanggar',
           url: '/pelanggar/datapelanggar',
-          icon: 'icon-puzzle',
+          icon: 'icon-people',
+        },
+        {
+          name: 'Tambah Pelanggar',
+          url: '/pelanggar/tambah',
+          icon: 'icon-note'
         }
       ],
     },
     {
       name: 'Data Polisi',
       url: '/police',
-      icon: 'icon-puzzle',
+      icon: 'icon-shield',
       children: [
         {
-          name: 'All Police',
+          name: 'Data polisi',
           url: '/police/allpolice',
-          icon: 'icon-puzzle',
+          icon: 'icon-people',
         },
         {
-          name: 'Active Police',
+          name: 'Polisi Aktif',
           url: '/police/active',
-          icon: 'icon-puzzle',
+          icon: 'icon-screen-smartphone',
+        },
+        {
+          name: 'Tambah Data Polisi',
+          url: '/police/active',
+          icon: 'icon-user',
         },
         {
           name: 'Location Police',
           url: '/police/location',
-          icon: 'icon-puzzle',
+          icon: 'icon-location-pin',
         }
       ],
     },
